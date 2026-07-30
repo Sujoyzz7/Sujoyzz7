@@ -1,7 +1,7 @@
 <h1 align="center">Hi there, I'm Sujoy Roy 👋</h1>
 
 <h3 align="center">Software Developer • Builder of small, Mid tools with a polished edge</h3>
----
+
 
 ### 💫 About Me
 
