@@ -19,18 +19,6 @@ I'm a passionate software developer based in Khulna, Bangladesh, building real-w
 - 📫 Reach me at **sujoyexe@gmail.com**
 
 ---
-
-### 🚀 Featured Projects
-
-| Project | Description |
-|---|---|
-| 📡 **SIGNAL** | Real-time chat web app with a shortwave-radio aesthetic, built with JavaScript and Supabase Realtime, backed by a Node.js/Express layer for rate limiting, CORS, and service-role key isolation |
-| 🔍 **TikTok Username Finder** | Python CLI tool for finding TikTok usernames with batch processing, exponential backoff for bot detection, and configurable flags |
-| ⏳ **Age Calculator** | A clean, simple age calculator built with HTML |
-| 🌐 **Portfolio** | Personal portfolio site |
-
----
-
 ### 💻 Tech Stack
 
 **Languages**
@@ -66,31 +54,3 @@ I'm a passionate software developer based in Khulna, Bangladesh, building real-w
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ---
-
-### 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sujoyzz7&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Sujoy's GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sujoyzz7&theme=tokyonight&hide_border=true" alt="Sujoy's GitHub Streak" width="48%" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sujoyzz7&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="60%" />
-</p>
-
----
-
-### 🌐 Connect With Me
-
-<p align="center">
-  <a href="https://facebook.com/Sujoyzz7"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white" /></a>
-  <a href="https://instagram.com/Sujoyzz7"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" /></a>
-  <a href="https://x.com/Sujoyzz7"><img src="https://img.shields.io/badge/X-black.svg?style=for-the-badge&logo=X&logoColor=white" /></a>
-  <a href="https://youtube.com/@Sujoyzz7"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" /></a>
-  <a href="https://stackoverflow.com/users/Sujoyzz7"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" /></a>
-  <a href="mailto:sujoyexe@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
-
-<p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=Sujoyzz7&icon=0&color=0" alt="Profile views" />
-</p>
