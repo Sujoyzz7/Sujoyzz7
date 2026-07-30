@@ -1,6 +1,6 @@
 <h1 align="center">Hi there, I'm Sujoy Roy 👋</h1>
 
-<h3 align="center">Software Developer • Builder of small, self-contained tools with a polished edge</h3>
+<h3 align="center">Software Developer • Builder of small, Mid tools with a polished edge</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2EE6D6&center=true&vCenter=true&width=600&lines=Building+real-time+apps+with+Node.js+%26+Supabase;Writing+clean+CLI+tools+in+Python;Crafting+interactive%2C+themed+UIs;Always+learning+something+new" alt="Typing SVG" />
