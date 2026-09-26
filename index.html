@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sujoy Roy — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F6F1;
+    --panel:#FFFFFE;
+    --ink:#181A17;
+    --muted:#63665F;
+    --accent:#2F5D50;
+    --accent-ink:#EFF4F1;
+    --line:#DEDAD0;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15171A;
+      --panel:#1C1F22;
+      --ink:#F1F0EA;
+      --muted:#9A9D96;
+      --accent:#7FB8A4;
+      --accent-ink:#12211C;
+      --line:#2C2F31;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15171A; --panel:#1C1F22; --ink:#F1F0EA; --muted:#9A9D96;
+    --accent:#7FB8A4; --accent-ink:#12211C; --line:#2C2F31;
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+  ::selection{background:var(--accent);color:var(--accent-ink);}
+  a{color:inherit;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  header.top{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:28px 24px;max-width:720px;margin:0 auto;
+    font-size:14px;
+  }
+  header.top .mark{font-family:'Fraunces',serif;font-weight:600;font-size:18px;}
+  header.top nav a{margin-left:22px;text-decoration:none;color:var(--muted);}
+  header.top nav a:hover{color:var(--ink);}
+
+  section{padding:56px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+
+  .hero{padding-top:24px;padding-bottom:64px;}
+  .hero p.kicker{color:var(--muted);font-size:15px;margin:0 0 14px;}
+  .hero h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(34px,6vw,54px);
+    line-height:1.08;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+  .hero p.lede{font-size:18px;color:var(--muted);max-width:56ch;margin:0 0 28px;}
+  .hero .links{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 20px;border-radius:3px;
+    text-decoration:none;font-size:14px;font-weight:500;
+    border:1px solid var(--ink);color:var(--ink);
+  }
+  .btn.primary{background:var(--ink);color:var(--bg);}
+  .btn:hover{opacity:.8;}
+
+  h2.h{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:22px;margin:0 0 28px;
+  }
+
+  .skills{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    border:1px solid var(--line);padding:7px 14px;border-radius:20px;
+    font-size:13.5px;color:var(--muted);
+  }
+
+  .project{
+    padding:26px 0;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:1fr;gap:8px;
+  }
+  .project:first-child{border-top:none;padding-top:0;}
+  .project .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .project h3{margin:0;font-size:19px;font-weight:600;}
+  .project .stack{font-size:12.5px;color:var(--muted);}
+  .project p{margin:0;color:var(--muted);font-size:15px;max-width:60ch;}
+  .project a.link{font-size:13.5px;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;white-space:nowrap;}
+  .project a.link:hover{text-decoration-color:var(--ink);}
+
+  form.contact{display:flex;flex-direction:column;gap:14px;max-width:480px;}
+  form.contact label{font-size:13px;color:var(--muted);}
+  form.contact input, form.contact textarea{
+    width:100%;padding:11px 12px;border:1px solid var(--line);
+    border-radius:3px;background:var(--panel);color:var(--ink);
+    font-family:inherit;font-size:15px;
+  }
+  form.contact input:focus, form.contact textarea:focus{
+    outline:2px solid var(--accent);outline-offset:1px;
+  }
+  form.contact textarea{resize:vertical;min-height:110px;}
+  .contact-note{font-size:13px;color:var(--muted);margin-top:10px;}
+
+  footer{padding:40px 0 64px;border-top:1px solid var(--line);}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:var(--muted);}
+  footer a{text-decoration:none;color:var(--muted);}
+  footer a:hover{color:var(--ink);}
+
+  @media (max-width:640px){
+    section{padding:44px 0;}
+    .hero{padding-bottom:48px;}
+  }
+
+  @media (max-width:520px){
+    header.top{padding:16px 20px;}
+    header.top .mark{font-size:16px;}
+    header.top nav a{margin-left:14px;font-size:13px;}
+    .hero .links{flex-direction:column;align-items:stretch;}
+    .btn{text-align:center;}
+    .project .row{flex-direction:column;align-items:flex-start;gap:4px;}
+    form.contact button{width:100%;}
+    footer .row{flex-direction:column;align-items:flex-start;}
+  }
+
+  @media (max-width:360px){
+    header.top nav a{margin-left:10px;font-size:12.5px;}
+    .hero p.lede{font-size:16.5px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="mark">Sujoy Roy</div>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <p class="kicker">Software developer — Khulna, Bangladesh</p>
+    <h1>I build clean, functional software across the web and beyond.</h1>
+    <p class="lede">I'm Sujoy, a developer who works comfortably across the stack — from HTML, CSS and JavaScript on the front end to PHP, Python, .NET and C/C++ underneath. I like taking a project from a rough idea to something people can actually use, with an eye for making it feel considered along the way.</p>
+    <div class="links">
+      <a class="btn primary" href="#projects">See my work</a>
+      <a class="btn" href="https://github.com/Sujoyzz7" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="h">Selected projects</h2>
+
+    <div class="project">
+      <div class="row">
+        <h3>CampusBazaar</h3>
+        <span class="stack">Next.js · Supabase · Vercel</span>
+      </div>
+      <p>A zero-commission, hyperlocal marketplace app for university students, connecting verified campus emails so people can buy and sell goods and services within their own school community. Currently building out the website ahead of the app.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>SIGNAL</h3>
+        <span class="stack">JavaScript · Supabase Realtime · Node/Express</span>
+      </div>
+      <p>A real-time chat web app with a shortwave-radio aesthetic. Refactored to route every database write through a dedicated backend, with rate limiting, CORS handling, and the service role key isolated away from the client.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>Multi-vendor marketplace</h3>
+        <span class="stack">Supabase · Admin panel</span>
+      </div>
+      <p>A professional ecommerce platform built for multiple vendors, with a full admin panel and support for both cash-on-delivery and online payments.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>TikTok Username Finder</h3>
+        <span class="stack">Python · CLI</span>
+      </div>
+      <p>A command-line tool for finding available TikTok usernames at scale, with batch processing and exponential backoff to stay under bot-detection radar.</p>
+    </div>
+
+    <p style="margin-top:28px;">
+      <a class="btn" href="https://github.com/Sujoyzz7?tab=repositories" target="_blank" rel="noopener">More on GitHub ↗</a>
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="h">Skills &amp; tools</h2>
+    <div class="skills">
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">PHP</span>
+      <span class="chip">Python</span>
+      <span class="chip">.NET</span>
+      <span class="chip">C / C++</span>
+      <span class="chip">C#</span>
+      <span class="chip">Supabase</span>
+      <span class="chip">Firebase</span>
+      <span class="chip">PostgreSQL / MySQL</span>
+      <span class="chip">AWS</span>
+      <span class="chip">Cloudflare</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="h">Get in touch</h2>
+    <form class="contact" id="contactForm">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn primary" style="align-self:flex-start;">Send message</button>
+    </form>
+    <p class="contact-note">This opens your email app with the message filled in and addressed to sujoyexe@gmail.com — nothing is sent from here directly.</p>
+  </section>
+
+  <footer>
+    <div class="row">
+      <span>© 2026 Sujoy Roy</span>
+      <span>
+        <a href="mailto:sujoyexe@gmail.com">Email</a> ·
+        <a href="https://github.com/Sujoyzz7" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://x.com/Sujoyzz7" target="_blank" rel="noopener">X</a> ·
+        <a href="https://stackoverflow.com/users/Sujoyzz7" target="_blank" rel="noopener">Stack Overflow</a>
+      </span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = encodeURIComponent('Portfolio contact from ' + name);
+    var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:sujoyexe@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
